@@ -1,0 +1,84 @@
+$color = #5ad5cb
+{ns}select
+  display: inline-block
+  position: relative
+  
+  .select-control
+    position relative
+    display: inline-block
+    border: 1px solid #ddd
+    border-radius: 3px
+    &.open
+      border: 1px solid #f60
+    &:hover
+      .icon
+        &.icon-close
+          display: block
+    .input-control
+      width 300px
+      height 38px
+      line-height: 38px
+      
+      padding-right: 50px
+      padding-left: 10px
+      &.placeholder
+        color: #ddd
+    .icon
+      display: inline-block
+      position: absolute
+      
+      top 0
+      line-height: 38px
+      transition  all .3s
+      &.icon-close
+        right: 23px
+        margin-right: 5px
+        cursor pointer
+        color: #999
+        display: none
+      &.icon-arrow
+        right: 5px
+        cursor: pointer
+        &.open
+          transform rotate(180deg)
+  .select-down
+    background-color: #fff
+    border: 1px solid #ddd
+    padding: 0
+    margin: 0
+    position: absolute
+    left: 0
+    top 38px
+    width: 100%
+    z-index: 20
+    ul
+      margin: 0 
+      padding: 0
+      li
+        line-height: 25px
+        padding: 10px 10px
+        margin: 5px 0
+        white-space: nowrap
+        overflow: hidden
+        &.active
+          background-color: $color
+          &:hover
+            background-color: $color
+        &:hover
+          background-color: #dcdfe6
+          cursor: pointer
+      
+
+.slide-toggle-enter-active { animation: slideDown .3s; transform-origin: center top }
+  
+.slide-toggle-leave-active { animation: slideUp .3s; transform-origin: center top }
+
+@keyframes slideDown {
+  0% { opacity: 0; transform: scaleY(0)}
+  100% { opacity: 1; transform: scaleY(1)}
+}
+
+@keyframes slideUp {
+  0% { opacity: 1; transform: scaleY(1)}
+  100% { opacity: 0; transform: scaleY(0)}
+}

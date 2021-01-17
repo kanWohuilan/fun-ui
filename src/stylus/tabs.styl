@@ -1,0 +1,33 @@
+$color = #5ad5cb
+{ns}tabs
+  .tabs-nav
+    border-bottom: 2px solid #e4e7ed
+    display flex
+    height 40px
+    .tabs-tab
+      padding: 0 20px
+      cursor pointer
+      line-height: 40px
+      font-size: 14px
+      position relative
+      z-index: 10
+      &:after
+        content: ""
+        position absolute
+        bottom -2px
+        left 50%
+        height 3px
+        width 0
+        opacity 0
+        background-color $color
+        z-index: 20
+        transition: all .3s
+        transform: translateX(-50%)
+      &.active
+        &:after
+          width 100%
+          opacity 1
+
+  .tabs-content
+    padding: 20px
+    

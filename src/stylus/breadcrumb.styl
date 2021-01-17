@@ -1,0 +1,27 @@
+{ns}breadcrumb
+  font-size: 14px
+  line-height: 1
+  {ns}breadcrumb-item
+    display: inline-block
+    .link
+      &.is-link
+        font-weight: 700
+        transition:color .2s cubic-bezier(.645,.045,.355,1);
+        color #303133
+        &:hover
+          color #409eff
+          cursor pointer
+    .separator
+      font-size: 12px
+      margin 0 9px
+      font-weight 700
+      color #c0c4cc
+{ns}breadcrumb-item:last-child
+  .link
+    font-weight: 400 !important
+    color: #606266 !important
+    cursor: text !important
+  .separator
+    display none
+
+      

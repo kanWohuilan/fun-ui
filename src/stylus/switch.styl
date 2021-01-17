@@ -1,0 +1,37 @@
+$color = #5ad5cb
+{ns}switch
+  display inline-block
+  height 22px
+  min-width 44px
+  border-radius: 20px
+  background-color: #cccccc
+  border: 1px solid #cccccc
+  cursor pointer
+  transition: all 1s
+  user-select none
+  position relative
+  vertical-align: middle
+  &:after
+    position absolute
+    width 18px
+    height 18px
+    left 1px
+    border-radius: 50%
+    background-color: #fff
+    top: 50%
+    transform translateY(-50%)
+    content: ""
+    cursor pointer
+    transition: all .5s
+  &.switch-checked
+    border-color: $color
+    background-color $color
+    &:after
+      left 23px
+  &.disabled
+    cursor not-allowed
+    background-color #f3f3f3
+    border-color: #f3f3f3
+    &:after
+      background: #ccc;
+      cursor: not-allowed

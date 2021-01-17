@@ -1,0 +1,97 @@
+$color = #5ad5cb
+{ns}slider
+  width 500px
+  &.disabled
+    .slider-control
+      border-color:   #c0c4cc
+      cursor: not-allowed
+      &:hover
+        transform: scale(1)
+    .slider-bar
+      background-color #c0c4cc
+      cursor: not-allowed
+      
+  &-runway 
+    width 100%
+    height 6px
+    background-color #e4e7ed  
+    border-radius: 3px
+    position relative
+    cursor pointer
+    .slider-control
+      display block
+      // height 36px
+      // width 36px
+      position absolute
+      z-index 80
+      top: -5px
+      // transform: translateY(-50%)
+      width 16px
+      height 16px
+      border-radius: 50%
+      background-color #fff
+      border: 2px solid $color
+      transition: .2s
+      user-select: none;
+      .slider-tooltip
+        display block
+        background-color #000000
+        color: #fff
+        opacity 0
+        transition: .3s
+        border-radius: 10px
+        left 50%
+        font-size: 3px
+        transform: translate(-50%, -125%)
+        position absolute
+        box-shadow: 0 0 2px #999
+        padding: 5px 10px
+        white-space nowrap
+        &:after
+          content: '';
+          display: block;
+          width: 0;
+          height: 0;
+          border: 5px solid transparent;
+          border-top-color: black;
+          position: absolute;
+          left: 50%;
+          bottom: -10px;
+          transform: translateX(-50%);
+      &:hover
+        // transform-origin: center %
+        transform: scale(1.2)
+        // transform: translateY(-50%)
+        .slider-tooltip
+          opacity 1
+    .slider-bar
+      display: block
+      height: 6px;
+      background-color: $color;
+      border-radius: 3px;
+      position: absolute
+      transition: .2s
+    .slider-stop
+      display inline-block
+      position absolute
+      width 6px
+      height 6px
+      border-radius: 50%
+      background-color #fff
+    .slider-marks
+      position absolute
+      white-space nowrap
+      display block
+      color: #999
+      transform: translateX(calc(-50% + 3px))
+      bottom: -25px
+      // &:after
+      //   display: block
+      //   margin: 8px auto
+      //   transform: translateX(-50%)
+      //   content: ''
+      //   width 16px
+      //   height 16px
+      //   border-radius: 50%
+      //   background-color #fff
+      //   border: 2px solid $color

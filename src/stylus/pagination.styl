@@ -1,0 +1,42 @@
+{ns}page
+  text-align: center
+  .page-align
+    display inline-block
+    display: flex
+    justify-content: center
+    align-items: center
+    .total
+      margin-right 10px
+    .page-list
+      margin-left:  10px
+      ul
+        display: flex
+        li
+          width 32px
+          height 32px
+          line-height: 30px
+          margin-right: 4px
+          border: 1px solid #dddee1;
+          border-radius: 4px;
+          transition: all .5s
+          a
+            display: block
+          &:hover
+            border-color: #2d8cf0; 
+            a
+              color: #2d8cf0; 
+          
+          &.active
+            background-color #2d8cf0
+            border-color: #2d8cf0; 
+            a
+              color #fff
+          &.disabled
+            border-color: #dddee1;
+            cursor: not-allowed 
+            a
+              color: #dddee1; 
+             
+         
+            
+          

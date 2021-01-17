@@ -1,0 +1,68 @@
+{ns}tooltip
+  position absolute
+  padding: 5px 8px
+  color: #ffffff
+  background-color #666666
+  border-radius: 5px
+  z-index: 100
+  animation: tooltip 1s
+  &:before
+    content: ''
+    border 5px solid transparent
+    position: absolute
+  &.top-left
+    &:before
+      border-top-color: #666
+      bottom: -10px
+      left: 15px
+  &.top
+    &:before
+      border-top-color: #666
+      bottom: -10px
+      left: 50%
+      margin-right: 5px
+  &.top-right
+    &:before
+      border-top-color: #666
+      bottom: -10px
+      right: 25px
+  &.left
+    &:before
+      border-left-color: #666
+      right: -10px
+      top: 50%
+      margin-bottom: 5px
+  &.right
+    &:before
+      border-right-color: #666
+      left: -10px
+      top: 50%
+      margin-bottom: 5px
+  &.bottom-left
+    &:before
+      border-bottom-color: #666
+      top: -10px
+      left: 15px
+  &.bottom
+    &:before
+      border-bottom-color: #666
+      top: -10px
+      left: 50%
+      margin-right: 5px
+  &.bottom-right
+    &:before
+      border-bottom-color: #666
+      top: -10px
+      right: 15px
+  
+      
+
+
+
+
+
+
+@keyframes tooltip{
+  from { opacity: 0 }
+  to { opacity: 1}
+  }
